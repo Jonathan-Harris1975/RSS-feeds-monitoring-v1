@@ -1,6 +1,3 @@
-// src/validators.js
-
-// Escape JSON-sensitive characters
 export function escapeJson(str) {
   if (!str) return "";
   return str
@@ -10,7 +7,6 @@ export function escapeJson(str) {
     .trim();
 }
 
-// Validate no line breaks or tabs
 export function isPlainText(str) {
   return !/[\n\r\t]/.test(str);
 }
