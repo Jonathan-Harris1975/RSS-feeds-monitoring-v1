@@ -1,4 +1,3 @@
-// src/shortioClient.js
 import axios from "axios";
 
 export async function shortenUrl(originalURL) {
@@ -20,6 +19,6 @@ export async function shortenUrl(originalURL) {
     return res.data.secureShortURL || res.data.shortURL;
   } catch (err) {
     console.error("Short.io error:", err.response?.data || err.message);
-    return originalURL; // fallback to original if error
+    return originalURL; // fallback to original
   }
 }
